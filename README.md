@@ -23,3 +23,5 @@ Any questions can be directed to info@fstf.fi
 The configuration of the software in this repository is the version FSTF is developing and using. If this software is to be used for other purposes, FSTF would be happy if the "applicationId" in the file /app/build.gradle (including the java package name) would be changed to something else than "fi.fstf.knappen". The app is not available at Google Play (for now).
 
 Otherwise, building the app in Android Studio should be straightforward.
+
+A thesis about the development of Knappen is available in Swedish at https://www.theseus.fi/bitstream/handle/10024/336631/Ainasoja_Daniel_Centria_thesis_2020.pdf (appendix 3 is a changelog for Knappen, written in English).
