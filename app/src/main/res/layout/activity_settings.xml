@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <!--android.support.v7.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:background="#FFAAAAAA"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/-->
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFDD4444"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Exit Application" />
+
+    <Button
+        android:id="@+id/enableTouchScreenPlayer"
+        android:layout_below="@id/exitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Enable touchscreen player" />
+
+    <Button
+        android:id="@+id/newspaperSettingsButton"
+        android:layout_below="@id/enableTouchScreenPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Newspaper settings" />
+
+    <TextView
+        android:id="@+id/speedSeekBarText"
+        android:layout_below="@id/newspaperSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Current speed:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/speedSeekBarValue"
+        android:layout_toRightOf="@id/speedSeekBarText"
+        android:layout_below="@id/newspaperSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="1.0"
+        android:textSize="20sp" />
+
+    <SeekBar
+        android:id="@+id/speedSeekBar"
+        android:layout_below="@id/speedSeekBarValue"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/emptyLogButton"
+        android:layout_below="@id/speedSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Empty the log" />
+
+    <Button
+        android:id="@+id/showAppInformationButton"
+        android:layout_below="@id/speedSeekBar"
+        android:layout_toRightOf="@id/emptyLogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Information" />
+
+    <ListView android:id="@+id/listViewLogList"
+        android:layout_below="@id/emptyLogButton"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"/>
+
+</RelativeLayout>

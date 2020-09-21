@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewspaperDistributorEdit">
+
+    <TextView
+        android:id="@+id/textViewNewspaperDistributorName"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Newspaper distributor name:"
+        android:layout_margin="8dp"
+    />
+
+    <EditText
+        android:id="@+id/editTextNewspaperDistrbutorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@id/textViewNewspaperDistributorName"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="textPersonName"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/textViewFTPServerAddress"
+        android:textSize="16sp"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNewspaperDistrbutorName"
+        android:text="FTP server address:" />
+
+    <TextView
+        android:id="@+id/textViewFTPPort"
+        android:textSize="16sp"
+        android:layout_margin="8dp"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNewspaperDistrbutorName"
+        android:text="Port:" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayoutAddressAndPort"
+        android:layout_below="@id/textViewFTPServerAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editTextFTPServerAddress"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:inputType="textUri"
+            android:text=""/>
+
+        <EditText
+            android:id="@+id/editFTPPort"
+            android:layout_width="60dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:hint="21"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:inputType="text|number"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:textSize="16sp"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutAddressAndPort"
+        android:text="FTP username:" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUsername"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="text"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:textSize="16sp"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextUsername"
+        android:text="FTP password:" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPassword"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="textPassword"
+        android:text=""/>
+
+    <Button
+        android:id="@+id/buttonSetDownloadTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:layout_margin="2dp"
+        android:text="Set new download time" />
+
+    <TextView
+        android:id="@+id/textViewDownloadTime"
+        android:textSize="28sp"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:layout_toEndOf="@id/buttonSetDownloadTime"
+        android:text="HH:MM" />
+
+    <Button
+        android:id="@+id/buttonSaveAndTestConnection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSetDownloadTime"
+        android:layout_margin="2dp"
+        android:text="Save and test connection" />
+
+    <Button
+        android:id="@+id/buttonDownloadManually"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSaveAndTestConnection"
+        android:layout_margin="2dp"
+        android:text="Download all files now" />
+
+    <Button
+        android:id="@+id/buttonDeleteManually"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonDownloadManually"
+        android:layout_margin="2dp"
+        android:text="Delete all files now" />
+
+    <Button
+        android:id="@+id/buttonDeleteNewspaperDistributor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonDeleteManually"
+        android:layout_margin="2dp"
+        android:text="Delete this newspaper distributor" />
+
+</RelativeLayout>

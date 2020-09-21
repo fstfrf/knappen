@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="fi.fstf.knappen">
+
+    <!-- You must have internet permission to access ftp -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Use access network state to see if wifi or data (3g/4g) is enabled or not before downloading data-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        tools:ignore="GoogleAppIndexingWarning"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewspaperDistributorActivity"
+            android:screenOrientation="portrait" />
+        <receiver
+            android:name=".AlarmReceiver"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewspaperDistributorEdit"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.DownloaderService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <!--
+    Because android:exported is set to "false",
+    the service is only available to this app.
+        -->
+        <activity android:name=".NewspaperDistributorTimePicker" />
+        <activity android:name=".InformationActivity"/>
+    </application>
+
+</manifest>

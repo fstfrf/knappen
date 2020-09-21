@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/distributorImage"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="8dp"
+        app:srcCompat="@drawable/ic_tap_and_play_black_24dp"
+        />
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_toEndOf="@id/distributorImage"
+        android:layout_toStartOf="@id/swipeControllerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="8dp"/>
+
+    <ImageView
+        android:id="@+id/swipeControllerImage"
+        android:layout_alignParentEnd="true"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="8dp"
+        app:srcCompat="@drawable/baseline_reorder_black_24"
+        />
+</RelativeLayout>
